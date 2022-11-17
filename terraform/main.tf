@@ -9,9 +9,10 @@ terraform {
 }
 
 provider "azurerm" {
+  skip_provider_registration = "true"
   features {}
+  use_msi = true
 }
-
 data "azurerm_client_config" "current" {}
 
 module "resource_group" {

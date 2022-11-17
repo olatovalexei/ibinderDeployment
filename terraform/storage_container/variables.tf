@@ -1,8 +1,8 @@
 variable "storage_account_name" {
-  type    = string
+  type = string
 }
 
 variable "name" {
-  type    = string
+  type = string
 }
 

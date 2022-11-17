@@ -1,13 +1,13 @@
 variable "location" {
-  type    = string
+  type = string
 }
 
 variable "resource_group_name" {
-  type    = string
+  type = string
 }
 
 variable "storage_account_name" {
-  type    = string
+  type = string
 }
 
 variable "account_replication_type" {

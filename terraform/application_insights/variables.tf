@@ -7,7 +7,7 @@ variable "resource_group_name" {
 }
 
 variable "application_insights_name" {
-    type = string 
+  type = string
 }
 
 variable "application_type" {

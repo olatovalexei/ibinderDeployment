@@ -23,3 +23,11 @@ variable "app_service_plan_id" {
 variable "storage_account_access_key" {
   type = string
 }
+
+variable "custom_app_settings" {
+  type        = map(string)
+}
+
+variable "key_app_settings" {
+  type        = map(string)
+}

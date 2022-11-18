@@ -6,8 +6,17 @@ resource "azurerm_windows_function_app" "ibinder" {
   storage_account_name       = var.storage_account_name
   storage_account_access_key = var.storage_account_access_key
 
+  app_settings = merge(
+    var.app_settings,
+    var.key_app_settings,
+    var.custom_app_settings
+  )
   site_config {
-
-  }
-
+    http2_enabled             = true
+    pre_warmed_instance_count = 1
+    ftps_state                = "Disabled"
+    always_on                 = true
+    cors {
+      allowed_origins = var.allowed_origins
+    }
 }

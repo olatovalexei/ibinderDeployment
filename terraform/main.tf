@@ -65,6 +65,7 @@ module "azure_function_app" {
   function_app_name          = var.function_app_name
   location                   = var.location
   resource_group_name        = var.resource_group_name
+  app_settings               = ####
   app_service_plan_id        = module.app_service_plan.azurerm_service_plan
   storage_account_name       = module.azurerm_storage_account.storage_account_name
   storage_account_access_key = module.azurerm_storage_account.storage_account_access_key
